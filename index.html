@@ -13,11 +13,13 @@
         }
 
         body {
-            background-color: #050b14;
+            background-color: #030408;
+            /* Yon bèl efè nwa ak flanm wouj ki ale ak Kratos Crash V2 */
             background-image: 
-                linear-gradient(rgba(14, 165, 233, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(14, 165, 233, 0.05) 1px, transparent 1px);
-            background-size: 32px 32px;
+                radial-gradient(circle at 50% -20%, rgba(220, 38, 38, 0.15), transparent 70%),
+                linear-gradient(rgba(220, 38, 38, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(220, 38, 38, 0.03) 1px, transparent 1px);
+            background-size: 100% 100%, 32px 32px, 32px 32px;
             color: #f8fafc;
             font-family: 'Inter', sans-serif;
             min-height: 100vh;
@@ -34,8 +36,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid rgba(56, 189, 248, 0.1);
-            background: rgba(5, 11, 20, 0.85);
+            border-bottom: 1px solid rgba(220, 38, 38, 0.15);
+            background: rgba(3, 4, 8, 0.9);
             backdrop-filter: blur(8px);
         }
 
@@ -46,20 +48,16 @@
         }
 
         .brand-logo {
-            width: 46px;
-            height: 46px;
+            width: 48px;
+            height: 48px;
             border-radius: 12px;
-            border: 2px solid #38bdf8;
-            background: linear-gradient(135deg, #0f172a, #0284c7);
+            border: 2px solid #dc2626;
+            background: #000;
+            box-shadow: 0 0 12px rgba(220, 38, 38, 0.45);
+            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 800;
-            font-size: 18px;
-            color: #38bdf8;
-            box-shadow: 0 0 12px rgba(56, 189, 248, 0.35);
-            overflow: hidden;
         }
 
         .brand-logo img {
@@ -73,6 +71,7 @@
             font-size: 16px;
             letter-spacing: 1px;
             color: #ffffff;
+            text-shadow: 0 0 8px rgba(220, 38, 38, 0.3);
         }
 
         .brand-text span {
@@ -120,9 +119,10 @@
             gap: 12px;
             font-size: 11px;
             letter-spacing: 3px;
-            color: #38bdf8;
+            color: #ef4444;
             font-weight: 600;
             margin-bottom: 14px;
+            text-shadow: 0 0 8px rgba(239, 68, 68, 0.3);
         }
 
         .secure-tag::before,
@@ -130,17 +130,28 @@
             content: "";
             height: 1px;
             width: 28px;
-            background: rgba(56, 189, 248, 0.35);
+            background: rgba(239, 68, 68, 0.35);
+        }
+
+        /* Entegrasyon Imaj Kratos crash la nan gwo */
+        .hero-banner {
+            width: 100%;
+            max-width: 150px;
+            border-radius: 20px;
+            border: 3px solid #dc2626;
+            box-shadow: 0 0 25px rgba(220, 38, 38, 0.5);
+            margin: 10px auto 20px;
+            display: block;
         }
 
         .main-title {
             font-family: 'Orbitron', sans-serif;
             font-size: 28px;
             font-weight: 800;
-            color: #38bdf8;
+            color: #ef4444;
             letter-spacing: 1.5px;
             margin-bottom: 12px;
-            text-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+            text-shadow: 0 0 20px rgba(239, 68, 68, 0.4);
         }
 
         .subtitle {
@@ -156,12 +167,12 @@
 
         /* Card Box */
         .card {
-            background: linear-gradient(180deg, rgba(15, 23, 42, 0.85) 0%, rgba(9, 15, 28, 0.95) 100%);
-            border: 1px solid rgba(56, 189, 248, 0.18);
+            background: linear-gradient(180deg, rgba(17, 24, 39, 0.9) 0%, rgba(10, 10, 15, 0.98) 100%);
+            border: 1px solid rgba(239, 68, 68, 0.18);
             border-radius: 22px;
             padding: 26px 22px;
             text-align: left;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 15px rgba(239, 68, 68, 0.05);
         }
 
         .input-label {
@@ -200,8 +211,8 @@
 
         .submit-btn {
             width: 100%;
-            background: linear-gradient(90deg, #0ea5e9, #2563eb);
-            color: #050b14;
+            background: linear-gradient(90deg, #dc2626, #991b1b);
+            color: #ffffff;
             border: none;
             border-radius: 14px;
             padding: 15px;
@@ -212,11 +223,13 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
-            transition: transform 0.15s ease, opacity 0.2s ease;
+            box-shadow: 0 0 15px rgba(220, 38, 38, 0.3);
+            transition: transform 0.15s ease, opacity 0.2s ease, box-shadow 0.2s ease;
         }
 
         .submit-btn:hover {
-            opacity: 0.92;
+            opacity: 0.95;
+            box-shadow: 0 0 20px rgba(220, 38, 38, 0.5);
         }
 
         .submit-btn:active {
@@ -226,8 +239,8 @@
         .spinner {
             width: 18px;
             height: 18px;
-            border: 2.5px solid rgba(5, 11, 20, 0.25);
-            border-top-color: #050b14;
+            border: 2.5px solid rgba(255, 255, 255, 0.25);
+            border-top-color: #ffffff;
             border-radius: 50%;
             animation: spin 0.8s linear infinite;
             display: none;
@@ -243,8 +256,8 @@
             margin-top: 20px;
             padding: 16px;
             border-radius: 14px;
-            background: rgba(14, 165, 233, 0.1);
-            border: 1px solid rgba(56, 189, 248, 0.4);
+            background: rgba(239, 68, 68, 0.08);
+            border: 1px solid rgba(239, 68, 68, 0.4);
             text-align: center;
         }
 
@@ -253,14 +266,15 @@
             font-size: 24px;
             font-weight: 800;
             letter-spacing: 3px;
-            color: #38bdf8;
+            color: #f87171;
             margin: 6px 0 12px;
+            text-shadow: 0 0 12px rgba(239, 68, 68, 0.4);
         }
 
         .copy-btn {
-            background: rgba(56, 189, 248, 0.2);
-            color: #38bdf8;
-            border: 1px solid rgba(56, 189, 248, 0.4);
+            background: rgba(239, 68, 68, 0.2);
+            color: #f87171;
+            border: 1px solid rgba(239, 68, 68, 0.4);
             padding: 7px 16px;
             border-radius: 8px;
             font-size: 13px;
@@ -282,7 +296,7 @@
 
         .divider {
             height: 1px;
-            background: rgba(148, 163, 184, 0.12);
+            background: rgba(220, 38, 38, 0.12);
             margin: 24px 0 20px;
         }
 
@@ -307,7 +321,10 @@
 
     <header class="navbar">
         <div class="brand">
-            <div class="brand-logo">KB</div>
+            <div class="brand-logo">
+                <!-- Se la logo a (ti imaj ou an) prale -->
+                <img src="kratos.jpg" alt="Logo Kratos">
+            </div>
             <div class="brand-text">
                 <h2>KRATOS BUG BOT</h2>
                 <span>WHATSAPP MULTI DEVICE</span>
@@ -321,16 +338,20 @@
 
     <main class="container">
         <div class="secure-tag">CONNEXION SÉCURISÉE</div>
+        
+        <!-- Se la gwo imaj Kratos ou a prale nan mitan paj la -->
+        <img class="hero-banner" src="kratos.jpg" alt="KRATOS BUG BOT Banner">
+
         <h1 class="main-title">KRATOS BUG BOT</h1>
         <p class="subtitle">
-            Connecte facilement ton numéro WhatsApp avec <strong>Pair Code</strong> en quelques secondes.
+            Connecte facilement ton numéro WhatsApp avec <strong>Pair Code</strong> en quelques secondes[cite: 2].
         </p>
 
         <div class="card">
             <form id="pairForm">
                 <label class="input-label" for="phone">NUMÉRO WHATSAPP (FORMAT INTERNATIONAL)</label>
                 <input type="text" id="phone" class="phone-input" placeholder="50958373108" required>
-                <p class="helper-text">Indicatif pays + numéro, sans le « + » ni espaces.</p>
+                <p class="helper-text">Indicatif pays + numéro, sans le « + » ni espaces[cite: 2].</p>
 
                 <button type="submit" class="submit-btn" id="submitBtn">
                     <span id="btnIcon">🔗</span>
@@ -377,44 +398,4 @@
             submitBtn.disabled = true;
             btnText.textContent = "Génération...";
             btnSpinner.style.display = "inline-block";
-            codeBox.style.display = "none";
-            errorBox.style.display = "none";
-
-            try {
-                const response = await fetch('/pair', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ phone })
-                });
-
-                const data = await response.json();
-
-                if (data.code) {
-                    pairCodeEl.textContent = data.code;
-                    codeBox.style.display = "block";
-                } else {
-                    errorBox.textContent = data.error || "Erreur lors de la génération.";
-                    errorBox.style.display = "block";
-                }
-            } catch (err) {
-                errorBox.textContent = "Erreur de connexion au serveur.";
-                errorBox.style.display = "block";
-            } finally {
-                submitBtn.disabled = false;
-                btnText.textContent = "Générer le code";
-                btnSpinner.style.display = "none";
-            }
-        });
-
-        copyBtn.addEventListener('click', () => {
-            const rawCode = pairCodeEl.textContent.replace('-', '');
-            navigator.clipboard.writeText(rawCode);
-            copyBtn.textContent = "Code copié !";
-            setTimeout(() => {
-                copyBtn.textContent = "Copier le code";
-            }, 2000);
-        });
-    </script>
-
-</body>
-              </html>
+            codeBox.style
